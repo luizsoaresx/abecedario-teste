@@ -1,0 +1,80 @@
+/* jogo.css — estilos da página do jogo (Trilha dos Sons) */
+
+/* Cores e fontes usadas na página (a área do professor também usa estas variáveis) */
+:root {
+  --brand: #3b9cf0; --brand-600: #2476c4; --brand-50: #eaf4ff;
+  --laranja: #ff9f43; --amarelo: #ffc93c; --verde: #2fbf71; --rosa: #ff6fa5; --roxo: #8c6cff;
+  --ok: #1f9d5c; --ok-bg: #e3f6ec; --warn: #b7791f; --warn-bg: #fff4d6; --bad: #d64545; --bad-bg: #fde8e8;
+  --ink: #1f2433; --ink-2: #4a5165; --ink-3: #7a8196; --line: #e4e8f0; --bg: #f5f7fb; --card: #ffffff;
+  --radius: 14px; --shadow: 0 1px 2px rgba(20, 30, 60, .06), 0 4px 16px rgba(20, 30, 60, .06);
+  --font: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Fredoka', 'Nunito', system-ui, sans-serif;
+  --barra-previa: 58px;
+}
+
+/* A página ocupa a tela inteira, sem margens e sem "puxar para atualizar" no celular */
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #1E1656; font-family: var(--font); color: var(--ink); overscroll-behavior: none; }
+
+/* #jogo cobre a tela toda. Dentro dele, #palco é onde o Phaser desenha.
+   O #palco respeita as "áreas seguras" do celular (o entalhe da câmera do iPhone, por exemplo). */
+#jogo { position: fixed; inset: 0; background: #1E1656; -webkit-tap-highlight-color: transparent; user-select: none; -webkit-user-select: none; }
+#palco {
+  position: absolute;
+  top: env(safe-area-inset-top, 0px); right: env(safe-area-inset-right, 0px);
+  bottom: env(safe-area-inset-bottom, 0px); left: env(safe-area-inset-left, 0px);
+}
+#palco canvas { touch-action: none; display: block; }
+
+/* #gestao é a caixa da área do professor (aparece no lugar do jogo) */
+#gestao { position: fixed; inset: 0; overflow: auto; background: var(--bg); -webkit-overflow-scrolling: touch; }
+
+/* ---------- Aviso "gire o celular" ----------
+   Só aparece em telas de toque, em pé (retrato), quando o jogo está na tela. */
+#girar {
+  display: none; position: fixed; inset: 0; z-index: 60; padding: 24px;
+  flex-direction: column; align-items: center; justify-content: center; gap: 18px; text-align: center;
+  background: linear-gradient(180deg, #4da3ff, #2476c4); color: #fff; font-family: var(--font-display);
+}
+#girar svg { width: 120px; height: 120px; animation: girar 2.2s ease-in-out infinite; }
+#girar p { margin: 0; font-size: 26px; font-weight: 600; line-height: 1.25; }
+#girar button { margin-top: 10px; border: 0; border-radius: 999px; padding: 12px 22px; background: rgba(255,255,255,.2); color: #fff; font-weight: 700; font-size: 16px; }
+@keyframes girar { 0%, 20% { transform: rotate(0); } 50%, 70% { transform: rotate(-90deg); } 100% { transform: rotate(0); } }
+@media (orientation: portrait) and (pointer: coarse) {
+  body:not(.na-gestao):not(.retrato-ok):not(.em-previa) #girar { display: flex; }
+}
+
+/* ---------- Pré-visualização da atividade (professor) ---------- */
+#barraPrevia {
+  position: fixed; top: 0; left: 0; right: 0; height: var(--barra-previa); z-index: 70;
+  display: flex; align-items: center; gap: 10px; padding: 0 14px;
+  background: #1f2433; color: #fff; font-family: var(--font); box-shadow: 0 2px 12px rgba(0,0,0,.2);
+}
+#barraPrevia .previa-info { flex: 1; min-width: 0; line-height: 1.2; }
+#barraPrevia .previa-info b { display: block; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#barraPrevia .previa-info span { font-size: 12.5px; color: #c9cfdd; }
+#barraPrevia button { border: 0; border-radius: 10px; padding: 9px 12px; font-weight: 700; font-size: 14px; cursor: pointer; background: rgba(255,255,255,.12); color: #fff; }
+#barraPrevia button.ativo { background: #fff; color: #1f2433; }
+#barraPrevia [data-sair-previa] { background: var(--laranja); color: #fff; }
+body.em-previa #jogo { top: var(--barra-previa); background: #2b3245; }
+/* "Celular": o palco vira um celular deitado (844 x 390 pontos, como um iPhone), centralizado */
+body.previa-celular #palco {
+  width: 844px; height: 390px; max-width: calc(100% - 48px); max-height: calc(100% - 48px);
+  top: 0; bottom: 0; left: 0; right: 0; margin: auto; border-radius: 28px; overflow: hidden;
+  box-shadow: 0 0 0 12px #11151f, 0 20px 50px rgba(0,0,0,.45);
+}
+@media (max-width: 640px) { #barraPrevia .previa-info span { display: none; } #barraPrevia button { padding: 8px 9px; font-size: 13px; } }
+
+/* Qualquer coisa com o atributo "hidden" fica escondida */
+[hidden] { display: none !important; }
+button, input, select, textarea { font-family: inherit; font-size: inherit; }
+
+/* "Carregando..." antes do jogo aparecer */
+#carregando { position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: #1E1656; color: #D6CEFF; font-family: var(--font); font-weight: 700; }
+#carregando .bolinha { width: 46px; height: 46px; border-radius: 50%; border: 6px solid rgba(255,255,255,.18); border-top-color: #FFC93C; animation: girarCarregando .9s linear infinite; }
+@keyframes girarCarregando { to { transform: rotate(360deg); } }
+
+/* Aviso de falha ao abrir o jogo (no lugar de uma tela vazia) */
+.aviso-falha { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; background: #1E1656; color: #fff; font-family: var(--font); text-align: center; padding: 24px; }
+.aviso-falha p { color: #D6CEFF; max-width: 420px; }
+.aviso-falha button { margin-top: 8px; border: 0; border-radius: 999px; padding: 12px 26px; background: #FFC93C; color: #23264A; font-weight: 800; font-size: 17px; cursor: pointer; box-shadow: 0 4px 0 #C98F12; }

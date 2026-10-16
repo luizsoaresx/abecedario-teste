@@ -1,0 +1,151 @@
+/* tema-galactico.css — visual "Abecedário Galáctico" para a área do professor e do administrador.
+   Carregar DEPOIS de css/jogo.css e css/gestao.css (só sobrescreve; não precisa apagar nada).
+   Não usa arquivos de imagem: o logo, o Bip e o fundo do login vêm de js/assets_galactico.js. */
+
+:root {
+  /* Cores do jogo (mesmas das telas do aluno no tema Espaço) */
+  --sol: #FFC93C;  --sol-600: #C98F12;                    /* ação principal (botão Jogar, Entrar, Publicar) */
+  --lilas: #7A5AF0; --lilas-600: #5638C4; --lilas-50: #F1EDFF; /* marca, foco, item selecionado */
+  --ciano: #1E88D0; --verde: #2E9A3E; --rosa: #D63F86; --laranja: #E8731A; --roxo: #7A5AF0; --amarelo: #FFC93C;
+  --noite: #1E1656; --noite-2: #2E2178; --tinta: #23264A;
+
+  /* Variáveis que a gestão já usa (reaproveitadas com as cores novas) */
+  --brand: var(--lilas); --brand-600: var(--lilas-600); --brand-50: var(--lilas-50);
+  --ok: #23853A; --ok-bg: #E5F5E8; --warn: #A86A12; --warn-bg: #FFF3D1; --bad: #D23B57; --bad-bg: #FDE6EB;
+  --ink: var(--tinta); --ink-2: #4A4F78; --ink-3: #7C7FA6; --line: #E6E2F5; --bg: #F4F2FC; --card: #ffffff;
+  --radius: 20px;
+  --shadow: 0 2px 0 #E9E5F8, 0 10px 28px rgba(46, 33, 120, .07);
+}
+
+#gestao { background: var(--bg); }
+
+/* ---------- Títulos em Fredoka (a mesma fonte do jogo) ---------- */
+.topo h1, .card h3, .modal-h h3, .perfil-h h2, .cab-ativ h2, .login-card h2, .kpi .v, .vazio h4, .passo-h h3 {
+  font-family: var(--font-display); font-weight: 600; letter-spacing: .1px;
+}
+.topo h1 { font-size: 27px; color: var(--ink); }
+.topo h1 small { font-family: var(--font); font-weight: 700; font-size: 13.5px; }
+.card h3 { font-size: 19px; }
+.kpi .v { font-size: 32px; }
+
+/* ---------- Menu lateral: céu do jogo ---------- */
+.side {
+  border-right: 0; color: #fff;
+  background:
+    radial-gradient(1.6px 1.6px at 18% 22%, rgba(255, 255, 255, .85) 50%, transparent 52%),
+    radial-gradient(1.2px 1.2px at 72% 12%, rgba(255, 255, 255, .7) 50%, transparent 52%),
+    radial-gradient(2px 2px at 84% 46%, rgba(255, 243, 184, .9) 50%, transparent 52%),
+    radial-gradient(1.2px 1.2px at 30% 64%, rgba(255, 255, 255, .6) 50%, transparent 52%),
+    radial-gradient(1.6px 1.6px at 60% 82%, rgba(255, 255, 255, .75) 50%, transparent 52%),
+    radial-gradient(1.2px 1.2px at 10% 92%, rgba(255, 255, 255, .55) 50%, transparent 52%),
+    linear-gradient(180deg, var(--noite) 0%, var(--noite-2) 70%, #3A2A92 100%);
+  background-size: 248px 320px, 248px 320px, 248px 320px, 248px 320px, 248px 320px, 248px 320px, 100% 100%;
+}
+.marca { flex-direction: column; align-items: flex-start; gap: 10px; padding: 2px 6px 22px; }
+.marca img.logo { width: 200px; height: auto; display: block; }
+.marca .papel { font-family: var(--font); font-size: 12.5px; font-weight: 800; color: var(--tinta); background: var(--sol); padding: 3px 12px; border-radius: 999px; }
+.nav-item { color: #D6CEFF; border-radius: 999px; padding: 11px 16px; }
+.nav-item:hover { background: rgba(255, 255, 255, .09); color: #fff; }
+.nav-item.ativo { background: var(--sol); color: var(--tinta); box-shadow: 0 4px 0 var(--sol-600); }
+.nav-sep { background: rgba(255, 255, 255, .14); }
+.side .rodape .nav-item { color: #FFB8D6; }
+
+/* ---------- Cabeçalho ---------- */
+.topo { background: rgba(244, 242, 252, .92); border-bottom: 1px solid var(--line); }
+.seletor-turma, .busca, .sel, .field input, .field select, .field textarea { border-radius: 12px; border-color: var(--line); }
+.btn-voltar { border-color: var(--line); box-shadow: 0 3px 0 #E6E2F5; }
+.btn-voltar:hover { border-color: #D8CEFF; }
+
+/* ---------- Botões: o mesmo "degrau" dos botões do jogo ---------- */
+.btn { border-radius: 999px; height: 44px; padding: 0 20px; font-weight: 800; }
+.btn:active { transform: translateY(2px); }
+.btn-primary { background: var(--sol); color: var(--tinta); box-shadow: 0 4px 0 var(--sol-600), inset 0 2px 0 rgba(255, 255, 255, .45); }
+.btn-primary:hover { background: #FFD45C; }
+.btn-ghost { background: #fff; color: var(--ink-2); border-color: var(--line); box-shadow: 0 3px 0 #E6E2F5; }
+.btn-ghost:hover { background: #F8F6FF; }
+.btn-danger { background: var(--bad); box-shadow: 0 4px 0 #A12A40; }
+.btn-danger:hover { background: #BF3049; }
+.btn-sm { height: 36px; padding: 0 14px; }
+.btn-block { height: 52px; font-size: 17px; }
+.btn-icon { border-radius: 10px; }
+.btn-icon:hover { background: var(--lilas-50); color: var(--lilas-600); }
+
+/* ---------- Cartões, KPIs, tabelas ---------- */
+.card { border-radius: var(--radius); }
+.kpi .ic { width: 54px; height: 54px; border-radius: 16px; }
+.tabela-wrap { border-radius: 16px; border-color: var(--line); }
+table.t th { background: #F8F6FF; color: var(--ink-3); }
+table.t td { border-bottom-color: #F0EDFA; }
+table.t tbody tr:hover td { background: #FAF8FF; }
+.chip { background: var(--lilas-50); color: var(--ink-2); }
+.alternador { background: #EEEAFB; border-radius: 999px; }
+.alternador button { border-radius: 999px; }
+.barra-mini { background: #EEEAFB; }
+.insight { background: var(--lilas-50); color: #3E2C9C; border-radius: 16px; }
+.insight b { color: #2A1C78; }
+.lista-atencao .it:hover, .evo td.aluno:hover b { color: var(--lilas-600); }
+.cel.andamento { background: #E9E3FF; color: var(--lilas-600); }
+.cel.concluida { background: #DDF3E2; color: #1E7A33; }
+.cel.dificuldade { background: #FCDCE3; color: #B32644; }
+.cel.bloqueada { background: #F1EFF8; color: #B8B4D0; }
+.evo th.mundo { border-radius: 10px; }
+.vazio img { width: 150px; }
+.dica-ativ { background: linear-gradient(120deg, #fff 0%, #F4EFFF 100%); }
+.dica-ativ img { width: 96px; height: 90px; object-fit: contain; }
+.mini-fig { background: var(--lilas-50); }
+.passo-h .num { background: var(--lilas); }
+.modelo { border-color: var(--line); border-radius: 16px; }
+.modelo.on { border-color: var(--lilas); box-shadow: 0 0 0 4px var(--lilas-50); }
+.modelo img.ic-branco { background: var(--lilas); }
+.rodada { border-radius: 16px; border-color: var(--line); background: #FBFAFF; }
+.slot { border-color: #CFC6F2; border-radius: 16px; }
+.slot:hover { border-color: var(--lilas); color: var(--lilas-600); }
+.check-turma.on { border-color: var(--lilas); background: var(--lilas-50); }
+.cats .chip.on { background: var(--lilas); }
+.barra-acoes { border-radius: 20px; border-color: var(--line); }
+.modal { border-radius: 24px; }
+.modal-bg { background: rgba(30, 22, 86, .55); }
+.toast { background: var(--tinta); }
+.demo-box { border-color: #D8CEFF; background: #FAF8FF; }
+.demo-box code { background: var(--lilas-50); }
+.cred { border-color: #D8CEFF; background: #FAF8FF; }
+
+/* ---------- Login (T04): o céu e o Bip da abertura do jogo ---------- */
+.login-art { background-color: var(--noite-2); background-position: center; background-size: cover; background-repeat: no-repeat; /* a imagem (bg_abertura) vem do t04_login.js */ gap: 8px; }
+.login-art::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30, 22, 86, 0) 45%, rgba(30, 22, 86, .55) 100%); pointer-events: none; }
+.login-art > * { position: relative; z-index: 1; }
+.login-art .bolha { display: none; }
+.login-art img.logo { width: 430px; max-width: 90%; height: auto; }
+.login-art img.bibo { width: 230px; filter: drop-shadow(0 18px 22px rgba(10, 5, 40, .45)); margin: 6px 0 4px; }
+.login-art p { font-weight: 700; text-shadow: 0 2px 8px rgba(20, 10, 60, .55); }
+.login-card h2 { font-size: 34px; }
+
+/* ---------- Banco de dados, perfil e cabeçalho (versão final) ---------- */
+.usuario { border: 0; background: transparent; padding: 4px 10px 4px 4px; border-radius: 999px; cursor: pointer; font: inherit; color: inherit; text-align: left; }
+.usuario:hover { background: var(--lilas-50); }
+.side .rodape { display: flex; flex-direction: column; gap: 4px; }
+.selo-banco { display: flex; align-items: center; gap: 8px; margin: 0 6px 10px; padding: 9px 12px; border-radius: 14px; font-size: 12.5px; font-weight: 800; line-height: 1.25; }
+.selo-banco .i { width: 18px; height: 18px; flex: 0 0 18px; }
+.selo-banco.nuvem { background: rgba(126, 224, 143, .16); color: #B7F0C1; }
+.selo-banco.local { background: rgba(255, 201, 60, .14); color: #FFE08A; }
+.perfil-grade .perfil-h h2 { margin: 0 0 6px; }
+.confirma-senha { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+.confirma-senha label { display: flex; align-items: center; gap: 6px; }
+.confirma-senha label .i { width: 16px; height: 16px; }
+.aviso-banco { margin-bottom: 18px; }
+@media (max-width: 1100px) { .selo-banco span { display: none; } .selo-banco { justify-content: center; } }
+@media (max-width: 700px) { .selo-banco { display: none; } .side .rodape { flex-direction: row; } }
+.side .rodape .nav-item[data-nav] { color: #D6CEFF; }
+.side .rodape .nav-item.ativo { color: var(--tinta); }
+/* Menu estreito (tablet / celular deitado): logo pequeno e o menu rola se a tela for baixa */
+.side { overflow-y: auto; overflow-x: hidden; }
+@media (max-width: 1100px) {
+  .marca { align-items: center; padding: 0 0 14px; }
+  .marca img.logo { width: 58px; }
+  .marca .papel { display: none; }
+}
+@media (max-height: 560px) and (min-width: 701px) {
+  .nav-item { padding: 8px 12px; }
+  .marca { padding-bottom: 8px; }
+  .selo-banco { display: none; }
+}

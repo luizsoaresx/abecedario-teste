@@ -1,0 +1,479 @@
+# Falas do Bip para gravar com voz neural (uma por linha). Gerado por ferramentas/listar_falas.js.
+# Pode acrescentar falas à mão. Formato: texto   ou   chave|texto falado (quando a pronúncia precisa de ajuda).
+Quer mesmo sair?
+Seu progresso está guardado!
+Oi! Se você é aluno, toque no quadro amarelo!
+Oi!
+Se você é aluno, toque no quadro amarelo!
+Toque nas suas três figuras secretas, na ordem certa.
+Digite seu nome de usuário e sua senha.
+Se precisar, peça ajuda para a professora.
+Hmm, não deu certo. Chame sua professora!
+Hmm, não deu certo.
+Chame sua professora!
+Esta entrada é para alunos. Professores usam o botão Sou professor.
+Esta entrada é para alunos.
+Professores usam o botão Sou professor.
+Estou sem internet agora. Peça ajuda para a professora.
+Estou sem internet agora.
+Peça ajuda para a professora.
+Muitas tentativas! Espere um pouquinho e tente de novo.
+Muitas tentativas!
+Espere um pouquinho e tente de novo.
+Seu acesso está desligado. Chame sua professora!
+Seu acesso está desligado.
+O jogo ainda não está ligado ao banco de dados. Chame a professora.
+O jogo ainda não está ligado ao banco de dados.
+Chame a professora.
+A professora mandou
+atividades novas
+uma atividade nova
+Que bom te ver!
+Vamos continuar a nossa trilha?
+Toque na fase que está brilhando para jogar!
+Essa fase ainda está trancada. Termine a fase anterior para abrir!
+Essa fase ainda está trancada.
+Termine a fase anterior para abrir!
+Olha como eu faço!
+Pausa! Quando quiser, toque no botão amarelo para continuar.
+Pausa!
+Quando quiser, toque no botão amarelo para continuar.
+Muito bem!
+Isso!
+Acertou!
+Legal!
+Que ouvido bom!
+Mandou bem!
+Vamos tentar de novo?
+Quase! Tenta outra vez.
+Quase!
+Tenta outra vez.
+Escuta de novo. Você consegue!
+Escuta de novo.
+Você consegue!
+Vamos para a próxima!
+Quantos pedacinhos tem?
+É esta aqui
+a letra
+Qual letra falta para escrever
+Monte a palavra
+Muito bem! Tudo guardado!
+Tudo guardado!
+Isso mesmo!
+Muito bem! Ligou tudo!
+Ligou tudo!
+combina com
+Uma dica
+Agora fale você.
+rima com
+começa como
+Essa é a mesma palavra! Fale outra.
+Essa é a mesma palavra!
+Fale outra.
+A palavra é
+Não ouvi nada. Toque no microfone e fale bem alto!
+Não ouvi nada.
+Toque no microfone e fale bem alto!
+O microfone está bloqueado. Peça para um adulto permitir o microfone no navegador.
+O microfone está bloqueado.
+Peça para um adulto permitir o microfone no navegador.
+Não encontrei o microfone. Peça ajuda para um adulto.
+Não encontrei o microfone.
+Peça ajuda para um adulto.
+Para eu escutar, precisa de internet.
+Este navegador não consegue me deixar escutar.
+O microfone não funcionou agora.
+Vamos fazer assim: você fala e um adulto confere.
+Vamos de novo! Fale
+Vamos de novo!
+Tudo bem! Vamos para a próxima.
+Tudo bem!
+Tentar de novo
+Jogar de novo
+Parabéns! Você ganhou
+Parabéns!
+Você ganhou
+Sua professora vai ficar feliz!
+Você está aprendendo muito! Vamos tentar de novo?
+Você está aprendendo muito!
+estrelas para liberar essa cor!
+Aqui ficam suas figurinhas! Cada fase nova que você termina te dá uma. Você também pode mudar a minha cor!
+Aqui ficam suas figurinhas!
+Cada fase nova que você termina te dá uma.
+Você também pode mudar a minha cor!
+Aqui você liga e desliga os sons, e escolhe a velocidade e a voz do Bip.
+Oi! Eu sou o Bip. Vamos brincar com os sons das palavras?
+Eu sou o Bip.
+Vamos brincar com os sons das palavras?
+Este navegador só tem esta voz em português.
+Toque num cartão para começar.
+Toque num cartão para jogar de novo.
+Ainda não tem atividade da professora. Quando ela mandar, aparece aqui! Que tal jogar no mapa?
+Ainda não tem atividade da professora.
+Quando ela mandar, aparece aqui!
+Que tal jogar no mapa?
+Estas são as atividades que a sua professora preparou!
+uma nova
+Toque em uma para jogar.
+Sem internet: seu progresso fica guardado.
+Ops, a internet sumiu! Pode continuar brincando: seu progresso fica guardado.
+Ops, a internet sumiu!
+Pode continuar brincando: seu progresso fica guardado.
+Que figura é essa? Aperte o microfone e fale o nome dela.
+Que figura é essa?
+Aperte o microfone e fale o nome dela.
+Aperte o microfone e fale
+Qual foi a última palavra?
+Qual figura começa com...
+Essas palavras rimam?
+Qual figura rima com
+Leve para a caixa verde as figuras que rimam com
+Ligue as figuras que rimam.
+Começam com o mesmo som?
+Qual figura começa com o mesmo som que
+Ligue as figuras que começam com o mesmo som.
+Leve para a caixa verde as figuras que começam como
+Qual figura começa com o som...
+Com que letra começa
+Ligue cada figura à letra do seu primeiro som.
+Fale uma palavra que começa com...
+Fale uma palavra que rima com
+Fale outra palavra que começa com o mesmo som de
+Fale uma palavra que começa com a letra
+Escute a frase e toque no tambor uma vez para cada palavra. Depois toque no botão verde.
+Escute a frase e toque no tambor uma vez para cada palavra.
+Depois toque no botão verde.
+Escute a palavra e toque no tambor para cada pedacinho, como bater palmas! Depois toque no botão verde.
+Escute a palavra e toque no tambor para cada pedacinho, como bater palmas!
+Escute com atenção e toque na figura certa.
+Arraste os pedacinhos para montar o nome da figura.
+Arraste a letra que falta para completar a palavra.
+Escute as duas palavras. Se estiver certo, toque no joinha para cima. Se não, no joinha para baixo.
+Escute as duas palavras.
+Se estiver certo, toque no joinha para cima.
+Se não, no joinha para baixo.
+Arraste cada figura para a caixa certa.
+Toque numa figura e depois no par dela para ligar as duas.
+Toque no microfone, espere ele ficar vermelho e fale bem alto. O Bip vai escutar!
+Toque no microfone, espere ele ficar vermelho e fale bem alto.
+O Bip vai escutar!
+urso
+úr
+sô
+galinha
+gá
+lí
+nhá
+pintinho
+pín
+tí
+nhô
+vaca
+vá
+cá
+jacaré
+já
+ré
+cachorro
+chôr
+rô
+pato
+pá
+tô
+elefante
+ê
+lê
+fân
+tê
+sapo
+sá
+pô
+girafa
+gí
+rá
+fá
+cabra
+brá
+gorila
+gô
+rí
+lá
+cavalo
+lô
+macaco
+má
+cô
+coruja
+rú
+panda
+pân
+dá
+papagaio
+gái
+ô
+pinguim
+guím
+porco
+pôr
+coelho
+lhô
+cobra
+baleia
+bá
+lêi
+á
+zebra
+zê
+hipopótamo
+hí
+pó
+tá
+mô
+maçã
+çã
+banana
+ná
+pão
+bolo
+bô
+cenoura
+cê
+nôu
+queijo
+quêi
+jô
+peixe
+pêi
+xê
+uva
+ú
+pizza
+píz
+zá
+milho
+mí
+limão
+mão
+pera
+pê
+abacaxi
+xí
+tomate
+melancia
+mê
+lân
+cí
+morango
+rân
+laranja
+sorvete
+sôr
+vê
+chocolate
+chô
+abacate
+cogumelo
+gú
+panqueca
+quê
+saco
+torta
+tôr
+abóbora
+bó
+coco
+panela
+nê
+mel
+cadeira
+dêi
+cama
+mesa
+sofá
+tapete
+geladeira
+gê
+fogão
+fô
+gão
+banheira
+nhêi
+planta
+plân
+carro
+cár
+trator
+trá
+ambulância
+âm
+bú
+caminhão
+nhão
+táxi
+barco
+bár
+navio
+ví
+avião
+ão
+nave
+foguete
+guê
+chave
+chá
+porta
+bandeira
+bân
+flor
+coração
+ção
+moeda
+árvore
+ár
+vô
+rê
+escada
+ês
+pedra
+drá
+castelo
+cás
+moinho
+í
+dado
+dô
+gato
+rato
+bola
+letra A
+a letra A
+letra B
+a letra B
+letra C
+a letra C
+letra D
+a letra D
+letra E
+a letra E
+letra F
+a letra F
+letra G
+a letra G
+letra H
+a letra H
+letra I
+a letra I
+letra J
+a letra J
+letra K
+a letra K
+letra L
+a letra L
+letra M
+a letra M
+letra N
+a letra N
+letra O
+a letra O
+letra P
+a letra P
+letra Q
+a letra Q
+letra R
+a letra R
+letra S
+a letra S
+letra T
+a letra T
+letra U
+a letra U
+letra V
+a letra V
+letra W
+a letra W
+letra X
+a letra X
+letra Y
+a letra Y
+letra Z
+a letra Z
+mmmmm
+sssss
+fffff
+lllll
+nnnnn
+zzzzz
+vvvvv
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+15
+25
+40
+não rima com
+começa com o mesmo som de
+não começa como
+combina com a letra
+começa com
+Você falou
+Por exemplo
+Hmm, eu ouvi
+outra coisa
+Fale bem alto
+São
+pedacinhos
+pedacinho
+palavras
+estrelas
+estrela
+Junte
+Tem
+novas
+E abriu uma fase nova!
+Você ganhou uma figurinha nova para o seu álbum!
+Pato nada
+Sapo pula
+Vaca come
+Gato dorme
+Cavalo corre
+Macaco pula
+Bola rola
+Peixe nada
+O gato dorme
+A vaca come
+Eu amo banana
+O carro corre
+A bola rola
+O sapo pula
+Eu vi zebra
+Eu comi pão
+O pato come pão
+Eu gosto de uva
+O macaco come banana
+A zebra tem listras
+O barco é grande
+Eu vi um avião
+O gato viu o rato
+O coelho come a cenoura
+Eu vi um barco grande
+A vovó fez um bolo
+O sapo pulou na pedra
+Eu comi uma
+A menina viu o
+O menino chutou a
+Papai dirigiu o
+A vovó fez um
+No céu passou um
+Na fazenda tem uma
+No mar nadou uma
+Na árvore tem um
+Eu abri a
+No rio tem um
+Eu achei uma

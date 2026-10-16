@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <!-- viewport-fit=cover: o jogo usa a tela inteira do celular, até atrás do entalhe da câmera -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1E1656">
+  <!-- Permite "Adicionar à tela inicial" e abrir como aplicativo, sem a barra do navegador -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Abecedário Galáctico</title>
+  <!-- Fontes arredondadas (Fredoka e Nunito) guardadas no próprio jogo: funcionam sem internet -->
+  <link rel="stylesheet" href="css/fontes.css?v=2026.10.3">
+  <link rel="stylesheet" href="css/jogo.css?v=2026.10.3">
+  <link rel="stylesheet" href="css/gestao.css?v=2026.10.3">
+  <link rel="stylesheet" href="css/tema-galactico.css?v=2026.10.3">
+</head>
+<body>
+  <!-- Aqui o Phaser desenha o jogo (dentro do #palco) -->
+  <div id="jogo"><div id="palco"></div></div>
+  <!-- Enquanto o jogo abre (e, com banco de dados, enquanto os dados chegam) -->
+  <div id="carregando"><div class="bolinha"></div><p>Carregando o Abecedário Galáctico...</p></div>
+  <!-- Aqui aparece a área do professor -->
+  <div id="gestao" hidden></div>
+
+  <!-- Barra da pré-visualização: aparece quando o professor quer ver a atividade como o aluno -->
+  <div id="barraPrevia" hidden data-aparelho="pc">
+    <div class="previa-info"><b data-titulo-previa>Atividade</b><span>Pré-visualização: é assim que o aluno vê. Nada é salvo.</span></div>
+    <button type="button" data-aparelho="pc">Computador</button>
+    <button type="button" data-aparelho="celular">Celular</button>
+    <button type="button" data-sair-previa>Voltar à edição</button>
+  </div>
+
+  <!-- Aviso para girar o celular (só aparece com o celular em pé) -->
+  <div id="girar">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><rect x="36" y="14" width="48" height="92" rx="10" fill="none" stroke="#fff" stroke-width="7"/><circle cx="60" cy="92" r="5" fill="#fff"/></svg>
+    <p>Gire o celular<br>para jogar!</p>
+    <button type="button" data-retrato-ok>Jogar assim mesmo</button>
+  </div>
+
+  <!-- Os arquivos terminam com ?v=... : quando sai uma versão nova, mudamos esse número e o navegador
+       baixa os arquivos novos em vez de usar os guardados (cache). -->
+  <!-- 1. O motor do jogo -->
+  <script src="js/lib/phaser.min.js?v=2026.10.3"></script>
+
+  <!-- 2. A base: ligação com o banco, imagens, desenhos, voz, microfone, palavras, atividades, dados, kit visual -->
+  <script src="js/config.js?v=2026.10.3"></script>
+  <script src="js/assets.js?v=2026.10.3"></script>
+  <script src="js/assets_galactico.js?v=2026.10.3"></script>
+  <script src="js/core/art.js?v=2026.10.3"></script>
+  <script src="js/core/icones_galactico.js?v=2026.10.3"></script>
+  <script src="js/core/services.js?v=2026.10.3"></script>
+  <script src="js/core/escuta.js?v=2026.10.3"></script>
+  <script src="js/core/nuvem.js?v=2026.10.3"></script>
+  <script src="js/data/content.js?v=2026.10.3"></script>
+  <script src="js/data/falas.js?v=2026.10.3"></script>
+  <script src="js/data/atividades.js?v=2026.10.3"></script>
+  <script src="js/data/db.js?v=2026.10.3"></script>
+  <script src="js/game/ui.js?v=2026.10.3"></script>
+  <script src="js/game/base.js?v=2026.10.3"></script>
+
+  <!-- 3. As telas do jogo (uma por arquivo) -->
+  <script src="js/game/t01_abertura.js?v=2026.10.3"></script>
+  <script src="js/game/t02_acesso.js?v=2026.10.3"></script>
+  <script src="js/game/t03_login_aluno.js?v=2026.10.3"></script>
+  <script src="js/game/t05_boas_vindas.js?v=2026.10.3"></script>
+  <script src="js/game/t06_mapa.js?v=2026.10.3"></script>
+  <script src="js/game/t07_introducao.js?v=2026.10.3"></script>
+  <script src="js/game/t08_atividade.js?v=2026.10.3"></script>
+  <script src="js/game/t08_modelo1_contagem.js?v=2026.10.3"></script>
+  <script src="js/game/t08_modelo2_escolha.js?v=2026.10.3"></script>
+  <script src="js/game/t08_modelo3_montar.js?v=2026.10.3"></script>
+  <script src="js/game/t08_modelo4_vf.js?v=2026.10.3"></script>
+  <script src="js/game/t08_modelo5_caixas.js?v=2026.10.3"></script>
+  <script src="js/game/t08_modelo6_ligar.js?v=2026.10.3"></script>
+  <script src="js/game/t08_modelo7_falar.js?v=2026.10.3"></script>
+  <script src="js/game/t10_resultado.js?v=2026.10.3"></script>
+  <script src="js/game/t11_recompensas.js?v=2026.10.3"></script>
+  <script src="js/game/t23_sons.js?v=2026.10.3"></script>
+  <script src="js/game/t24_tarefas.js?v=2026.10.3"></script>
+
+  <!-- 4. A área do professor (HTML, uma tela por arquivo) -->
+  <script src="js/admin/charts.js?v=2026.10.3"></script>
+  <script src="js/admin/admin_base.js?v=2026.10.3"></script>
+  <script src="js/admin/t04_login.js?v=2026.10.3"></script>
+  <script src="js/admin/t13_inicio.js?v=2026.10.3"></script>
+  <script src="js/admin/t14_t16_alunos.js?v=2026.10.3"></script>
+  <script src="js/admin/t17_evolucao.js?v=2026.10.3"></script>
+  <script src="js/admin/t18_relatorio.js?v=2026.10.3"></script>
+  <script src="js/admin/t19_aluno.js?v=2026.10.3"></script>
+  <script src="js/admin/t20_painel.js?v=2026.10.3"></script>
+  <script src="js/admin/t21_professores.js?v=2026.10.3"></script>
+  <script src="js/admin/t22_turmas.js?v=2026.10.3"></script>
+  <script src="js/admin/t25_atividades.js?v=2026.10.3"></script>
+  <script src="js/admin/t26_criar_atividade.js?v=2026.10.3"></script>
+  <script src="js/admin/t27_resultado_atividade.js?v=2026.10.3"></script>
+  <script src="js/admin/t28_perfil.js?v=2026.10.3"></script>
+
+  <!-- 5. Liga tudo (sempre o último) -->
+  <script src="js/app.js?v=2026.10.3"></script>
+</body>
+</html>
